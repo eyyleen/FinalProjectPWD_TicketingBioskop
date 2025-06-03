@@ -288,12 +288,12 @@ background-color: black;
         <div class="contact-us-section contact-us-section2">
             <h1>Address & Info</h1>
             <h3>Phone Numbers</h3>
-            <p><a href="tel:01011391148">+2 010 11 39 11 48</a><br>
-                <a href="tel:01011391148">+2 010 11 39 11 48</a></p>
+            <p> +6289508198431<br>
+                +6282163336443</p>
             <h3>Address</h3>
-            <p>El Sherouk City , Suez Desert Road , Cairo 11837 - P.O. Box 43</p>
+            <p>Jalan Tinggal Kenangan, Lelah Batin - S.M. Box 2</p>
             <h3>E-mail</h3>
-            <p><a href="mailto:cinemareservation@bue.edu.eg">cinemareservation@bue.edu.eg</a></p>
+            <p><a href="mailto:sinemacuy@gmail.com">sinemacuy@gmail.com</a></p>
         </div>
     </div>
 
