@@ -196,11 +196,11 @@ include 'ceklog.php';
     </button>
 
     <!-- NAV LINKS -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
+ <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="schedule.php">Schedule</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact-us.php">Contact</a></li>
+        <li style="font-family: Algerian; font-size:20px; margin:20px;" class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
+        <li style="font-family: Algerian; font-size:20px; margin:20px;" class="nav-item"><a class="nav-link active" href="schedule.php">Schedule</a></li>
+        <li style="font-family: Algerian; font-size:20px; margin:20px;" class="nav-item"><a class="nav-link active" href="contact-us.php">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -212,7 +212,7 @@ include 'ceklog.php';
   <div class="cards-wrapper">
     <!-- Card 1 -->
     <div class="schedule-card">
-      <img class="movie-poster" src="img/movie-poster-2.jpg" alt="Captain Marvel">
+      <img class="movie-poster" src="movie-poster-2.jpg" alt="Captain Marvel">
       <div class="card-body">
         <div class="schedule-header"> Cinépolis</div>
         <div class="schedule-subtitle">Qarmat Bitamrmat   - Reguler 3D </div>
@@ -226,7 +226,7 @@ include 'ceklog.php';
 
     <!-- Card 2 -->
     <div class="schedule-card">
-      <img class="movie-poster" src="movie-poster-3.jpg" alt="The Lego Movie">
+      <img class="movie-poster" src="lego.jpg" alt="The Lego Movie">
       <div class="card-body">
         <div class="schedule-header">Bogor Square XXI</div>
         <div class="schedule-subtitle">The Lego Movie - Reguler 2D </div>
@@ -252,7 +252,7 @@ include 'ceklog.php';
       </div>
     </div>
        <div class="schedule-card">
-      <img class="movie-poster" src="img/movie-poster-5.jpg" alt="The Lego Movie">
+      <img class="movie-poster" src="movie-thumb-5.jpg" alt="The Lego Movie">
       <div class="card-body">
         <div class="schedule-header">CGV Cinemas</div>
         <div class="schedule-subtitle">VICE - Reguler 3D </div>

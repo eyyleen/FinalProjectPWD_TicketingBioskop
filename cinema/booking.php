@@ -97,10 +97,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['type'], $_POST['theat
                     <select name="paymentMethod" required>
                         <option disabled selected>PAYMENT METHOD</option>
                         <option value="Bank Transfer">Bank Transfer</option>
-                        <option value="E-Wallet">E-Wallet</option>
-                        <option value="Credit Card">Credit Card</option>
+                        <option value="ewallet">E-Wallet</option>
+                        <option value="cod">Credit Card</option>
                     </select>
-                    <p><strong>Total Harga:</strong> <?= $hargaTiket ? 'Rp ' . number_format($hargaTiket, 0, ',', '.') : '-' ?></p>
+                    <!-- <p style="color: red; font-family: Algerian;"><strong>Total Harga:</strong> <?= $hargaTiket ? 'Rp ' . number_format($hargaTiket, 0, ',', '.') : '-' ?></p> -->
                     <input type="hidden" name="harga" value="<?= $hargaTiket ?>">
                     <button type="submit" name="submit" class="form-btn">Book a Seat</button>
                 </form>
@@ -115,36 +115,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['type'], $_POST['theat
                     } elseif (!preg_match('/^[0-9]+$/', $pNumber)) {
                         echo "<p style='color:red;'>Phone Number can only contain numbers.</p>";
                     } else {
-                        $insert = "INSERT INTO bookingTable (
-                            movieName, bookingTheatre, bookingType, bookingDate, bookingTime, 
-                            bookingFName, bookingLName, bookingPNumber
-                        ) VALUES (
-                            '{$row['movieTitle']}',
-                            '{$_POST['theatre']}',
-                            '{$_POST['type']}',
-                            '{$_POST['date']}',
-                            '{$_POST['hour']}',
-                            '$fName',
-                            '{$_POST['lName']}',
-                            '$pNumber'
-                        )";
+                        $lName = $_POST['lName'] ?: '-';
+$insert = "INSERT INTO bookingTable (
+    movieName, bookingTheatre, bookingType, bookingDate, bookingTime, 
+    bookingFName, bookingLName, bookingPNumber
+) VALUES (
+    '{$row['movieTitle']}',
+    '{$_POST['theatre']}',
+    '{$_POST['type']}',
+    '{$_POST['date']}',
+    '{$_POST['hour']}',
+    '$fName',
+    '$lName',
+    '$pNumber'
+)";
+
                         if (mysqli_query($link, $insert)) {
     $lastId = mysqli_insert_id($link);
     $paymentMethod = $_POST['paymentMethod'];
     mysqli_query($link, "INSERT INTO paymentTable (bookingID, paymentMethod) VALUES ($lastId, '$paymentMethod')");
-    
-    echo "<script>alert('Booking berhasil! Silakan lanjut ke pembayaran.');</script>";
-    echo "<p style='color: #155724; background-color: #d4edda; border: 1px solid #c3e6cb; padding: 15px; border-radius: 8px; font-weight: bold; max-width: 400px;'>";
-    echo "Booking berhasil! Silakan lanjut ke ";
-    echo "<a href='payment.php?id=$lastId' style='color: #004085; background-color: #cce5ff; padding: 8px 15px; border-radius: 5px; text-decoration: none; font-weight: bold;'>";
-    echo "pembayaran";
-    echo "</a>.";
-    echo "</p>";
-} else {
-    echo "<p style='color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; padding: 15px; border-radius: 8px; max-width: 400px; font-weight: bold;'>";
-    echo "Gagal menyimpan data.";
-    echo "</p>";
-}
+                        
+    echo "
+<form id='paymentForm' method='POST' action='payment.php'>
+    <input type='hidden' name='payment_method' value='{$_POST['paymentMethod']}'>
+    <input type='hidden' name='name' value='{$fName}'>
+    <input type='hidden' name='movie' value='{$row['movieTitle']}'>
+    <input type='hidden' name='seat' value='{$_POST['theatre']} - {$_POST['type']} - {$_POST['hour']}'>
+    <input type='hidden' name='price' value='{$hargaTiket}'>
+</form>
+<script>
+    document.getElementById('paymentForm').submit();
+</script>
+";
+                        }
 
                     }
                 }

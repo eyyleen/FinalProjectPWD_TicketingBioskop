@@ -31,18 +31,18 @@ $result = mysqli_query($conn, $sql);
   margin-right: 0rem;
 }
 .navbar-brand {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-left: 0.5rem;
 }
 .navbar img {
-  height: 50px; /* tinggi logo */
-  width: 100px; /* lebar logo */
+  height: 150px; /* tinggi logo */
+  width: 200px; /* lebar logo */
 }
 
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0px;
         }
 
         h1 {
@@ -64,11 +64,11 @@ $result = mysqli_query($conn, $sql);
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s ease;
+            transition: transform 0.7s ease;
         }
 
         .movie-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-20px);
         }
 
         .movie-card img {
@@ -136,9 +136,9 @@ $result = mysqli_query($conn, $sql);
     <!-- NAV LINKS -->
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="schedule.php">Schedule</a></li>
-        <li class="nav-item"><a class="nav-link active" href="contact-us.php">Contact</a></li>
+        <li style="font-family: Algerian; font-size:20px; margin:20px;" class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
+        <li style="font-family: Algerian; font-size:20px; margin:20px;" class="nav-item"><a class="nav-link active" href="schedule.php">Schedule</a></li>
+        <li style="font-family: Algerian; font-size:20px; margin:20px;" class="nav-item"><a class="nav-link active" href="contact-us.php">Contact</a></li>
       </ul>
     </div>
   </div>

@@ -61,7 +61,7 @@ if (!$data) {
 </head>
 <body class="container mt-5">
     <h2>Edit Data Film</h2>
-    <form method="POST" action="update_film.php">
+    <form method="POST" action="editpros.php">
         <input type="hidden" name="movieID" value="<?= $data['movieID']; ?>">
 
         <div class="mb-3">

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="UTF-8">
@@ -22,8 +21,8 @@
 " href="index.php"><strong></strong>Home</a></li>
                 <li><a style="font-family:italic; color: white; text-shadow: 0px 0px 0px #6e5a11, 4px 0px 0px #836d24, 0px 0px 0px #a88616, 2px 0px 0px #b08909, 1px 0px 0px #ab995e;"href="schedule.php">Schedule</a></li>
                 <li><a style="font-family: italic; color: white;text-shadow: 2px 2px 0px #6e5a11, 4px 0px 0px #836d24, 6px 0px 0px #a88616, 8px 0px 0px #b08909, 1px 0px 0px #ab995e;"href="contact-us.php">Contact</a></li>
-                <li><a style="font-family: ITALIC; color: white;text-shadow: 2px 2px 0px #6e5a11, 4px 0px 0px #836d24, 6px 0px 0px #a88616, 8px 0px 0px #b08909, 1px 0px 0px #ab995e;"href="register.php">Register</a></li>
                 <li><a style="font-family: ITALIC; color: white;text-shadow: 2px 2px 0px #6e5a11, 4px 0px 0px #836d24, 6px 0px 0px #a88616, 8px 0px 0px #b08909, 1px 0px 0px #ab995e;"href="movie.php">Movie</a></li>
+                <li><a style="font-family: ITALIC; color: white;text-shadow: 2px 2px 0px #6e5a11, 4px 0px 0px #836d24, 6px 0px 0px #a88616, 8px 0px 0px #b08909, 1px 0px 0px #ab995e;"href="booking.php">Booking</a></li>
             
             </ul>
              
@@ -160,7 +159,7 @@ h1 span:Before{
         width: 41%;
         overflow: hidden;
         left: 100%;
-background-color: none ;
+        background-color: none ;
         border-radius: 50px;
         box-shadow: 0px 8px 0px rgba(255, 31, 31, 0.1);
     }
@@ -575,14 +574,14 @@ mysqli_close($link);
                     <i class="fas fa-4x fa-credit-card"></i>
                 </div>
                 <h2>2. Pay for your tickets</h2>
-                <p>choose the movie you want to watch at our theaters</p>
+                <p>pay with multiple payment methods</p>
             </div>
             <div class="service-item">
                 <div class="service-item-icon">
                     <i class="fas fa-4x fa-theater-masks"></i>
                 </div>
-                <h2>3. Pick your seats & Enjoy watching</h2>
-                <p>choose the movie you want to watch at our theaters</p>
+                <h2>3. Enjoy watching</h2>
+                <p>Thanks! If you're settling in to watch something, enjoy the show!</p>
             </div>
             <div class="service-item"></div>
             <div class="service-item"></div>
@@ -614,7 +613,7 @@ mysqli_close($link);
                 </div>
             </div>
             <div class="trailers-grid-item">
-                <img src="img/movie-thumb-4.jpg" alt="">
+                <img src="movie-thumb-4.jpg" alt="">
                 <div class="trailer-item-info" data-video="Ze5YA4mkzhI">
                     <h3>Secret Men Club</h3>
                     <i class="far fa-3x fa-play-circle"></i>
@@ -640,9 +639,9 @@ mysqli_close($link);
         <div class="trailers-grid">
             
             <div class="trailers-grid-item">
-                <img src="movie-thumb-4.jpg" alt="">
+                <img src="dit.jpeg" alt="">
                 <div class="trailer-item-info" data-video="Z1BCujX3pw8">
-                    <h3>The Secret Men's Club</h3>
+                    <h3>Adit Sopo Jarwo</h3>
                     <i class="far fa-3x fa-play-circle"></i>
                 </div>
             </div>

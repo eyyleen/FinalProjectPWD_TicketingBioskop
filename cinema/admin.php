@@ -207,6 +207,7 @@ include 'ceklog.php';
     .admin-container {
         display: grid;
         grid-template-columns: 1fr 5fr;
+        height: 100vh;
     }
 
     .admin-section1 {
@@ -527,6 +528,11 @@ include 'ceklog.php';
                         <h2 style="color:rgb(30, 94, 5)">📊</h2>
                 <li><i class=""></i><a href="sold.php">Graph</a> <i class="fas admin-dropdown fa-chevron-right"></i></li>
                     </div>
+                    <div class="admin-section-stats-panel">
+                        <i class="fas fa-ticket-alt" style="background-color:rgb(238, 235, 19)"></i>
+                        <h2 style="color:rgb(30, 94, 5)">📊</h2>
+                <li><i class=""></i><a href="pay.php">Payments</a> <i class="fas admin-dropdown fa-chevron-right"></i></li>
+                    </div>
                     
                      
                 </div>
@@ -614,6 +620,7 @@ if (isset($_POST['submit'])) {
             </div>
         </div>  
     </div>
+
 
 </body>
 
