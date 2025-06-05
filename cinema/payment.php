@@ -90,13 +90,13 @@ $price = $_POST['price'] ?? '-';
 <?php if (strtolower($method) === 'bank transfer'): ?>
         <h4 class="text-warning">Transfer Bank</h4>
         <p>Silakan transfer ke rekening berikut:</p>
-        <p><strong>Bank BCA</strong><br>No. Rekening: <strong>1234567890</strong><br>Atas Nama: <strong>PT. Bioskop Jaya</strong></p>
+        <p><strong>Bank BCA</strong><br>No. Rekening: <strong>1234567890</strong><br>Atas Nama: <strong>Sinemacuuyy</strong></p>
 
       <?php elseif (strtolower($method) === 'ewallet'): ?>
         <h4 class="text-warning">Pembayaran E-Wallet</h4>
         <p>Silakan scan QR berikut untuk melakukan pembayaran:</p>
         <img src="qris.jpg" alt="QR E-Wallet" width="200" class="mb-2 qr-image">
-        <p>Akun: <strong>PT. Bioskop Jaya</strong></p>
+        <p>Akun: <strong>Sinemacuuyy</strong></p>
 
       <?php elseif (strtolower($method) === 'cod'): ?>
         <h4 class="text-warning">Pembayaran Credit Card</h4>
